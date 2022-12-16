@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoFetcher | A Simple Unsplash API Photo Fetcher</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<style>
+    body{
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    #box{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+       
+    }
+
+    div{
+        display: flex;
+        justify-content: center;
+    }
+
+    .box{
+        height: 50px;
+        width: 100%;
+        background-color: rgb(85, 85, 85);
+        top: 0;
+        position: sticky;
+    }
+
+    .mbox{
+        box-sizing: border-box;
+        height: 50px;
+        width: 0;
+        background-color: rgb(85, 85, 85);
+        border-top: 3px solid deeppink;
+    }
+
+    .input{
+        margin: 25px 5px;
+        max-width: 50%;
+    }
+
+    .inp{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #btn{
+        font-size: 1rem;
+        margin: 25px 0px;
+        padding: 10px 15px;
+        border-radius: 10px;
+        outline: none;
+        border: unset;
+        cursor: pointer;
+        background-color: deeppink;
+        color: white;
+    }
+
+    #btn:hover{
+        background-color: rgb(221, 1, 118);
+    }
+  
+    #dwnld{
+        font-size: 1rem;
+        margin: 25px 0px;
+        padding: 10px 15px;
+        border-radius: 10px;
+        outline: none;
+        border: unset;
+        cursor: pointer;
+        background-color: deeppink;
+        color: white;
+        display: none;
+    }
+
+    #dwnld:hover{
+        background-color: rgb(221, 1, 118);
+    }
+  
+    
+
+    #height{
+        margin-left: 20px;
+        padding: 5px 5px;
+        outline: none;
+    }
+
+    #type{
+        margin-left: 25px;
+        padding: 5px 5px;
+        outline: none;
+    }
+
+    #width{
+        margin-left: 20px;
+        padding: 5px 5px;
+        outline: none;
+    }
+
+    img{
+        width: 75%;
+        height: auto;
+        margin: 10px;
+        border: 2px solid deeppink;
+        transition: all 0.7s ease-in;
+    }
+
+    span{
+        font-weight: bold;
+        position: absolute;
+        left: 10px;
+        top: 13px;
+        color: white;
+    }
+  #dwnldbox a{
+    text-decoration: none;
+    color: white;
+  }
+</style>
+<body>
+    <div class="box"><span>PhotoFetcher</span>
+        <div class="mbox" id="mbox"></div>
+    </div>
+    <form action="" method="GET">
+        <div class="inp">
+            <div class="input">
+                Image Type: <input type="text" name="type" id="type" placeholder="eg. nature">
+            </div>
+            <div class="input">
+                Image Height: <input type="number" name="height" id="height" placeholder="in px: eg. 900">
+            </div>
+            <div class="input">
+                Image Width: <input type="number" name="width" id="width" placeholder="in px: eg. 1600">
+            </div>
+              
+        </div>
+        <div>
+            <a id="btn">Fetch</a>
+        </div>
+    </form>
+    <div id="box"></div> 
+    <div id="dwnldbox">
+      <a id="dwnld"></a>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
